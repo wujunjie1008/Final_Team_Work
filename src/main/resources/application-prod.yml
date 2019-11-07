@@ -1,0 +1,9 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /luckymoney
+limit:
+  minMoney: 2
+  maxMoney: 99
+  description: 最少要发${limit.minMoney},最多可以发${limit.maxMoney}元.
+
