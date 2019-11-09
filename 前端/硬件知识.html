@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>硬件知识</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\bootstrap.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="padding-top: 90px;">
+
+<div class="container-fluid">
+    <!-- 上部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+    <div class="container-fluid" >
+        <div class="navbar-header">
+            <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="https://www.baidu.com/">主页</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 18px;margin-left: 40px;color: rgb(255, 255, 255);">
+                        硬件信息<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="background-color: #660066;">
+                        <li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">CPU</a></li>
+                        <li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">显卡</a></li>
+                        <li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">内存</a></li>
+                        <li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">硬盘</a></li>
+                        <li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">笔记本</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="margin-left: 40px;color: rgb(255, 255, 255);">社区交流</a>
+        </div>
+        <div>
+            <form class="navbar-form navbar-left" role="search" style="margin-left: 650px;">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入查找的内容" style="width: 300px;">
+                </div>
+                <a href="https://www.baidu.com/">
+                    <img src="search.png" width="35px" height="35px">
+                </a>
+            </form>
+        </div>
+        <div>
+            <a href="https://www.baidu.com/"><img src="头像.png" style="width: 37px;margin-top: 8px;"></a>
+        </div>
+    </div>
+</nav>
+<!-- 左部导航栏 -->
+<div class="col-md-2" style="margin-left:0px;margin-top:40px;">
+    <div class="panel-group" id="accordion" >
+        <div class="panel panel-default" >
+            <div class="panel-heading" style="background-color: #572561;">
+                <h5 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <h5><span class="glyphicon glyphicon-th-list" style="color: rgb(231, 237, 238); font-size: 20px;"> 功能页面</span></h5>
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">热点资讯</a>
+                        <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">硬件匹配</a>
+                        <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">关键字匹配</a>
+                        <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">电脑猎场</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-10">
+    <div class="page-header">
+        <h1 style="font-family: 微软雅黑;font-weight: bold;">硬件知识</h1>
+    </div>
+    <div class="row-fluid">
+
+            <div class="media" style="background-color:#660066;color:white;border-radius: 30px/30px;border:solid 3px purple;">
+                <div class="media-left">
+                    <img src="显卡.jpg" class="media-object" style="width:200px;height: 200px;">
+                </div>
+                <div class="media-body">
+                    <h2 class="media-heading">NVIDIA® GeForce RTX 2080</h2>
+                    <p style="font-size: 20px;">
+                        RT CORES
+                        依托于专用光线追踪硬件，可实现真实的阴影、反射、折射和全局照明。
+
+                        TENSOR CORES
+                        人工智能正在推动着有史以来最伟大的技术革命，Turing 将其带入了个人图形计算领域。您可以通过体验 NVIDIA DLSS 给游戏带来的巨大性能提升，来感受 AI 计算的强悍之处。
+
+                        新一代着色技术
+                        可变速率着色集中处理细节丰富的区域，从而提高性能。Mesh Shader 的高级几何处理能力支持每个场景中更多的对象，因而能够渲染更复杂的环境。
+
+                        并发处理
+                        同步浮点和整数处理使 Turing GPU 能够更有效地处理当今游戏大作更为繁重的运算任务。
+                    </p>
+                </div>
+            </div>
+
+        <svg  width="100%" height="100%">
+            <polyline points="170,120 170,60 620,60" style="fill:none;stroke:#660066;stroke-width:3" />
+            <polyline points="450,120 450,60" style="fill:none;stroke:#660066;stroke-width:3" />
+            <polyline points="790,120 790,60 620,60" style="fill:none;stroke:#660066;stroke-width:3" />
+            <polyline points="1070,120 1070,60 620,60" style="fill:none;stroke:#660066;stroke-width:3" />
+            <polyline points="610,60 610,0" style="fill:none;stroke:#660066;stroke-width:3" />
+        </svg>
+        <div class="row-fluid">
+            <div class="col-md-3">
+                <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
+                    <img alt="300x200" src="cpu.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
+                        <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">CPU</h3>
+                    <div>
+                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
+                    <img alt="300x200" src="显卡.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
+                    <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">显卡</h3>
+                    <div>
+                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
+                    <img alt="300x200" src="内存.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
+                    <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">内存</h3>
+                    <div>
+                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
+                    <img alt="300x200" src="硬盘.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
+                    <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">硬盘</h3>
+                    <div>
+                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<datalist id="data1">
+    <option>123</option>
+    <option>456</option>
+    <option>789</option>
+</datalist>
+</div>
+</body>
+</html>
