@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="css\bootstrap.css" rel="stylesheet">
+		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+		<script src="jquery-3.4.1.js">
+		<!-- 包括所有已编译的插件 -->
+		<script src="js/bootstrap.min.js"></script>
+		<title>测试ajax</title>
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			function a1(){
+				$.ajax({
+					url:"/dropcpu/{model}",
+					data:{
+						"m":$("#txtName".val)
+					},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					success:function(){
+						alert("true")
+					}
+				});
+			}
+		</script>
+		
+		
+		<input type="text" id="txtName" onblur="a1()"/>
+		<button onclick="a1()">提交</button>
+	</body>
+</html>
