@@ -14,9 +14,9 @@
 		<script type="text/javascript">
 			function a1(){
 				$.ajax({
-					url:"/dropcpu/{model}",
+					url:"/hello6",
 					data:{
-						"m":$("#txtName".val)
+						"m":document.getElementById("txtName").value
 					},
 					dataType:'json',//服务器返回json格式数据
 					type:'post',//HTTP请求类型

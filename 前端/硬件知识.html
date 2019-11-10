@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css\bootstrap.css" rel="stylesheet">
     <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="jquery-3.4.1.js"></script>
     <!-- 包括所有已编译的插件 -->
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -15,6 +15,26 @@
 <div class="container-fluid">
     <!-- 上部导航栏 -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+	<script type="text/javascript">
+		function a1(modelName){
+			$.ajax({
+				url:"/hello6",
+				data:{
+					"m":modelName
+				},
+				dataType:'json',//服务器返回json格式数据
+				type:'post',//HTTP请求类型
+				success:function(){
+					var massage = data.split(/[\n]/);
+					modelName = data[0];
+					modelPassage = data[1];
+					document.getElementById("modelName").innerText = modelName;
+					document.getElementById("modelPassage").innerText = modelPassage;
+					alert("true")
+				}
+			});
+		}
+	</script>
     <div class="container-fluid" >
         <div class="navbar-header">
             <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="home.html">主页</a>
@@ -88,8 +108,8 @@
                     <img src="显卡.jpg" class="media-object" style="width:200px;height: 200px;">
                 </div>
                 <div class="media-body">
-                    <h2 class="media-heading">NVIDIA® GeForce RTX 2080</h2>
-                    <p style="font-size: 20px;">
+                    <h2 class="media-heading" id="modelName">NVIDIA® GeForce RTX 2080</h2>
+                    <p style="font-size: 20px;" id="modelPassage">
                         RT CORES
                         依托于专用光线追踪硬件，可实现真实的阴影、反射、折射和全局照明。
 
@@ -118,7 +138,7 @@
                     <img alt="300x200" src="cpu.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                         <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">CPU</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
@@ -127,7 +147,7 @@
                     <img alt="300x200" src="显卡.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">显卡</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
@@ -136,7 +156,7 @@
                     <img alt="300x200" src="内存.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">内存</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
@@ -145,7 +165,7 @@
                     <img alt="300x200" src="硬盘.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">硬盘</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
@@ -154,7 +174,7 @@
 </div>
 
 <datalist id="data1">
-    <option>123</option>
+    <option>GTX1080</option>
     <option>456</option>
     <option>789</option>
 </datalist>
