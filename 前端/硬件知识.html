@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>硬件知识</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css\bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-    <script src="jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <!-- 包括所有已编译的插件 -->
-    <script src="js/bootstrap.min.js"></script>
+
 </head>
 <body style="padding-top: 90px;">
 
@@ -18,26 +18,103 @@
 	<script type="text/javascript">
 		function a1(modelName){
 			$.ajax({
-				url:"/hello6",
+				url:"/getCPUModel",
 				data:{
-					"m":modelName
+					"model":modelName
 				},
-				dataType:'json',//服务器返回json格式数据
-				type:'post',//HTTP请求类型
-				success:function(){
-					var massage = data.split(/[\n]/);
-					modelName = data[0];
-					modelPassage = data[1];
+
+				type:'get',//HTTP请求类型
+				success:function(data){
+
+					var massage = data.split("\n");
+					var modelName = massage[0];
+					var modelPassage = massage[1];
 					document.getElementById("modelName").innerText = modelName;
 					document.getElementById("modelPassage").innerText = modelPassage;
-					alert("true")
-				}
+
+				},
+				error:function () {
+                    alert("failed")
+
+                }
 			});
 		}
+        function a2(modelName){
+            $.ajax({
+                url:"/getdisplayCardModel",
+                data:{
+                    "model":modelName
+                },
+
+                type:'get',//HTTP请求类型
+                success:function(data){
+
+                    var massage = data.split("\n");
+                    var modelName = massage[0];
+                    var modelPassage = massage[1];
+                    document.getElementById("modelName").innerText = modelName;
+                    document.getElementById("modelPassage").innerText = modelPassage;
+
+
+                },
+                error:function () {
+                    alert("failed")
+
+                }
+            });
+        }
+        function a3(modelName){
+            $.ajax({
+                url:"/getmemoryModel",
+                data:{
+                    "model":modelName
+                },
+
+                type:'get',//HTTP请求类型
+                success:function(data){
+
+                    var massage = data.split("\n");
+                    var modelName = massage[0];
+                    var modelPassage = massage[1];
+                    document.getElementById("modelName").innerText = modelName;
+                    document.getElementById("modelPassage").innerText = modelPassage;
+
+
+                },
+                error:function () {
+                    alert("failed")
+
+                }
+            });
+        }
+        function a4(modelName){
+            $.ajax({
+                url:"/gethardDiskModel",
+                data:{
+                    "model":modelName
+                },
+
+                type:'get',//HTTP请求类型
+                success:function(data){
+
+                    var massage = data.split("\n");
+                    var modelName = massage[0];
+                    var modelPassage = massage[1];
+                    document.getElementById("modelName").innerText = modelName;
+                    document.getElementById("modelPassage").innerText = modelPassage;
+
+
+                },
+                error:function () {
+                    alert("failed")
+
+                }
+            });
+        }
 	</script>
     <div class="container-fluid" >
         <div class="navbar-header">
-            <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="home.html">主页</a>
+            <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="templates/home.html">主页</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
@@ -69,7 +146,7 @@
             </form>
         </div>
         <div>
-            <a href="home.html"><img src="头像.png" style="width: 37px;margin-top: 8px;"></a>
+            <a href="../static/home.html"><img src="头像.png" style="width: 37px;margin-top: 8px;"></a>
         </div>
     </div>
 </nav>
@@ -142,30 +219,33 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
                     <img alt="300x200" src="显卡.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">显卡</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a2(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
                     <img alt="300x200" src="内存.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">内存</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a3(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="thumbnail" style="background-color:#660066;color: white;border-radius: 30px/30px;">
                     <img alt="300x200" src="硬盘.jpg" style="border-radius: 50px/50px; width: 120px;height: 140px;"/>
                     <h3 style="text-align: center;font-family: 微软雅黑;font-weight: bold;">硬盘</h3>
                     <div>
-                        <input type="text" list="data1" placeholder="选择" onchange="a1(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
+                        <input type="text" list="data1" placeholder="选择" onchange="a4(this.value)" style="color: black; font-weight: bold; width: 160px; text-align: center;margin-left: 57px;">
                     </div>
                 </div>
             </div>
