@@ -12,6 +12,30 @@
 
   </head>
    <body style="padding-top: 90px;">
+	   <script type="text/javascript">
+	   	function a1(passageName){
+	   		$.ajax({
+	   			url:"/information",
+	   			data:{
+	   				"name":passageName
+	   			},
+				dataType:'json',//服务器返回json格式数据
+	   			type:'post',//HTTP请求类型
+	   			success:function(){
+					
+	   				alert(data.data.title);
+					alert(data.data.content)
+					alert(data.data.time)
+					alert(data.data.source)
+					alert(data.data.visitTimes)
+					sessionStorage.setItem('key', data);
+					window.open('test2.html','_self');
+	   			}
+	   		});
+	   		
+	   	}
+	   </script>
+	   
         <div class="container-fluid">
                 <!--导航栏-->
                 <div class="row-fluid">
@@ -91,7 +115,7 @@
                                     <a href="#" class="pull-left"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3861115627,2732340871&fm=26&gp=0.jpg" class="media-object" alt='' /></a>
                                    <div class="media-body">
                                        <h1 class="media-heading">
-                                           点击领取
+                                           <a onclick="a1(this.innerText)">点击领取</a>
                                        </h1> 
                                        <div style="font-size: 30px;">
                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
@@ -103,7 +127,7 @@
                                     <a href="#" class="pull-left"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3861115627,2732340871&fm=26&gp=0.jpg" class="media-object" alt='' /></a>
                                    <div class="media-body">
                                        <h1 class="media-heading">
-                                           点击领取
+                                           <a onclick="a1(this.innerText)">点击领取</a>
                                        </h1> 
                                        <div style="font-size: 30px;">
                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
@@ -114,7 +138,7 @@
                                     <a href="#" class="pull-left"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3861115627,2732340871&fm=26&gp=0.jpg" class="media-object" alt='' /></a>
                                    <div class="media-body">
                                        <h1 class="media-heading">
-                                           点击领取
+                                           <a onclick="a1(this.innerText)">点击领取</a>
                                        </h1> 
                                        <div style="font-size: 30px;">
                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.

@@ -12,23 +12,26 @@
 	
 	<body>
 		<script type="text/javascript">
-			function a1(){
-				$.ajax({
-					url:"/hello6",
-					data:{
-						"m":document.getElementById("txtName").value
-					},
-					dataType:'json',//服务器返回json格式数据
-					type:'post',//HTTP请求类型
-					success:function(){
-						alert("true")
-					}
-				});
+			function a1(data){
+				// $.ajax({
+				// 	url:"/hello6",
+				// 	data:{
+				// 		"m":document.getElementById("txtName").value
+				// 	},
+				// 	dataType:'json',//服务器返回json格式数据
+				// 	type:'post',//HTTP请求类型
+				// 	success:function(){
+				// 		alert("true")
+				// 	}
+				// });
+				
+				sessionStorage.setItem('key', data);
+				window.open('test2.html','_self');
 			}
 		</script>
 		
 		
-		<input type="text" id="txtName" onblur="a1()"/>
+		<input type="text" id="txtName" onblur="a1(this.value)"/>
 		<button onclick="a1()">提交</button>
 	</body>
 </html>
