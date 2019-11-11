@@ -14,7 +14,8 @@
 		<script type="text/javascript">
 			(function a1(){
 				var data = sessionStorage.getItem("key");
-				document.getElementById("name").innerText = data;
+				c = JSON.parse(data);
+				document.getElementById("name").innerText = c.count;
 			}())
 		</script>
 	</body>
