@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class demo {
-    @GetMapping("/just")
+    @GetMapping("/硬件知识")
     public String hhh(){
         return "硬件知识";
     }
