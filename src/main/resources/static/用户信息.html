@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Hunter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script  src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script  src="js/bootstrap.js" type="text/javascript"></script>
+	<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+	<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->	
+	</head>
+	<body style="padding-top: 90px;">
+		<!-- 上部导航栏 -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+			<div class="container-fluid" >
+				<div class="navbar-header">
+					<a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="home.html">主页</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 18px;margin-left: 40px;color: rgb(255, 255, 255);">
+								硬件信息<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" style="background-color: #660066;">
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">CPU</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">显卡</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">内存</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">硬盘</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">笔记本</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar-header">
+						<a class="navbar-brand" href="#" style="margin-left: 40px;color: rgb(255, 255, 255);">社区交流</a>
+				</div>
+				<div>
+					<form class="navbar-form navbar-left" role="search" style="margin-left: 650px;">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="输入查找的内容" style="width: 300px;">
+						</div>
+						<a href="https://www.baidu.com/">
+							<img src="search.png" width="35px" height="35px">
+						</a>
+					</form>
+				</div>
+				<div>
+					<a href="https://www.baidu.com/"><img src="头像.png" style="width: 37px;margin-top: 8px;"></a>
+				</div>
+			</div>
+		</nav>
+		<!-- 左部导航栏 -->
+		<div class="col-md-2" style="margin-left:0px;margin-top:40px;">
+				<div class="panel-group" id="accordion" >
+					<div class="panel panel-default" >
+						<div class="panel-heading" style="background-color: #572561;">
+			    <h5 class="panel-title">
+				   <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				   <h5><span class="glyphicon glyphicon-th-list" style="color: rgb(231, 237, 238); font-size: 20px;"> 功能页面</span></h5>
+				   </a>
+			    </h5>
+		   		</div>
+		    <div id="collapseOne" class="panel-collapse collapse in">
+			    <div class="panel-body">
+					<div class="list-group">
+						<a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">热点资讯</a>
+						<a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">硬件匹配</a>
+						<a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">关键字匹配</a>
+						<a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">电脑猎场</a>
+					</div>
+			    </div>
+		    </div>
+				</div>
+			</div>
+		</div>
+		<!-- 用户信息 -->
+		<div class="col-md-6 column">
+			<div style="border:rgb(111, 119, 111) 2px solid; border-radius: 15px/20px;margin-top: 20px;margin-left: 60px; height: 550px;width: 1000px;text-align: center; ">
+				<p style="border-radius: 12px/18px; background-color: #660066; padding-top: 20px; color: rgb(255, 255, 255);font-size: 22px;letter-spacing: 20px;height: 70px;">个人资料</p>
+				<div class="container">
+					<div class="row clearfix">
+						<div class="col-md-4 column">
+							<img src="头像.png" style="width: 175px;height: 175px;margin-top: 30px;"><!-- 头像位置 -->
+							<div class="form-group"><!-- 上传头像的位置 -->
+								<label for="exampleInputFile" style="padding-top: 7px; height: 40px; width: 110px; color: rgb(255, 255, 255); background-color: #660066; margin-top: 30px;font-size: 18px;border:rgb(255, 255, 255) 2px solid">更换头像</label>
+								<input type="file" id="exampleInputFile" style="position:absolute;clip:rect(0 0 0 0);"/>
+							</div>
+						</div>
+						<div class="col-md-6 column">
+							<form class="form-horizontal" role="form">
+								<!-- 修改昵称 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+									<label for="inputEmail3" class="col-sm-2 control-label" style="margin-left: 0px;">昵称</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3" />
+									</div>
+								</div>
+								<!-- 修改密码 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+										<label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="inputPassword3" />
+									</div>
+								</div>
+								<!-- 修改性别 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+										<label for="inputEmail3" class="col-sm-2 control-label">性别</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3" />
+									</div>
+								</div>
+								<!-- 修改生日 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+										<label for="inputEmail3" class="col-sm-2 control-label">生日</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3" />
+									</div>
+								</div>
+								<!-- 修改所在地 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+										<label for="inputEmail3" class="col-sm-2 control-label">所在地</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3" />
+									</div>
+								</div>
+								<!-- 修改学校 -->
+								<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;box-shadow: 2px 7px 10px #660066;">
+										<label for="inputEmail3" class="col-sm-2 control-label">学校</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3" />
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- 保存修改按钮 -->
+						<div class="col-md-10 column">
+							<button style="border:#660066 5px solid; font-weight: bold; font-family:微软雅黑; color: rgb(255, 255, 255); margin-top: 50px;font-size: 18px;margin-left: 10px;background-color: #660066;">保存修改</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
