@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Hunters</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body style="padding-top: 90px;">
+       <script type="text/javascript">
+              function load(){//界面刷新时显示所有用户的信息
+                     $.ajax({
+                            type:'',
+                            url:"",
+                            data:{
+
+                            },
+                            success:function(){
+
+                            },
+                            error:function () {
+                                   alert("failed")
+
+                            }
+                     });
+              }
+              function addcomputer(){//添加新的电脑
+                     $.ajax({
+                            type:'',
+                            url:"",
+                            data:{
+
+                            },
+                            success:function(){
+
+                            },
+                            error:function () {
+                                   alert("failed")
+                            }
+                     })
+              }	
+       </script>
+		<!-- 上部导航栏 -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+			<div class="container-fluid" >
+				<div class="navbar-header">
+					<a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="https://www.baidu.com/">主页</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 18px;margin-left: 40px;color: rgb(255, 255, 255);">
+								硬件信息<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" style="background-color: #660066;">
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">CPU</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">显卡</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">内存</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">硬盘</a></li>
+								<li><a href="#" style="font-size: 18px;color: rgb(255, 255, 255);">笔记本</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar-header">
+						<a class="navbar-brand" href="#" style="margin-left: 40px;color: rgb(255, 255, 255);">社区交流</a>
+				</div>
+				<div>
+					<form class="navbar-form navbar-left" role="search" style="margin-left: 650px;">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="输入查找的内容" style="width: 300px;">
+						</div>
+						<a href="https://www.baidu.com/">
+							<img src="search.png" width="35px" height="35px">
+						</a>
+					</form>
+				</div>
+				<div>
+					<a href="https://www.baidu.com/"><img src="头像.png" style="width: 37px;margin-top: 8px;"></a>
+				</div>
+			</div>
+		</nav>
+		<!-- 左部导航栏 -->
+		<div class="col-md-2" style="margin-left:0px;margin-top:40px;">
+				<div class="panel-group" id="accordion" >
+					<div class="panel panel-default" >
+						<div class="panel-heading" style="background-color: purple;">
+			    <h5 class="panel-title">
+				   <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				   <h5><span class="glyphicon glyphicon-th-list" style="color: rgb(231, 237, 238); font-size: 20px;"> 功能页面</span></h5>
+				   </a>
+			    </h5>
+		   		</div>
+		    <div id="collapseOne" class="panel-collapse collapse in">
+			    <div class="panel-body">
+					<div class="list-group">
+                                          <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">编辑文章</a>
+                                          <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">更新硬件</a>
+                                          <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">新增硬件</a>
+                                          <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="#">添加整机</a>
+					</div>
+			    </div>
+		    </div>
+				</div>
+			</div>
+		</div>
+
+         <div class="col-md-10" >
+
+
+             <div class="col-md-2" >
+                 <h3 >更改产品：</h>
+             </div>
+             <div class="col-md-8">
+                    <input class="xx" type="text" 
+                    list="computername" 
+                    placeholder="惠普暗影精灵2" 
+                    style="color: black; 
+                    font-weight: bold; 
+                    width: 300px; 
+                    text-align: center;
+                    margin-left: -100px;
+                    margin-top: 20px">
+                </div>
+             </div>
+             <datalist id="computername">
+                    <option>惠普暗影精灵2</option>
+                    <option>惠普暗影精灵3</option>
+                    <option>惠普暗影精灵4</option>
+                    <option>惠普暗影精灵5</option>
+             </datalist>
+
+
+             <div class="col-md-2">
+                    <h3 style="margin-left:15px;">产品名称：</h>
+             </div>
+             <div class="col-md-2">
+                <input class="xx" type="text" 
+                placeholder="例：惠普暗影精灵2" 
+                style="color: black; 
+                font-weight: bold; 
+                width: 300px; 
+                text-align: center;
+                margin-left: -135px;
+                margin-top: 20px">
+             </div>
+             <div class="col-md-2">
+                    <h3>产品价格：</h>
+             </div>
+             <div class="col-md-2">
+                    <input class="xx" type="text" 
+                    placeholder="例：10000" 
+                    style="color: black; 
+                    font-weight: bold; 
+                    width: 300px; 
+                    text-align: center;
+                    margin-left: -150px;
+                    margin-top: 20px">
+             </div>
+
+
+
+            <div class="col-md-10">
+                    <div class="col-md-2">
+                            <h3>产品关键字：</h>
+                     </div>
+                     <div class="col-md-2">
+                            <input class="xx" type="text" 
+                            list="keyword"
+                            placeholder="" 
+                            style="color: black; 
+                            font-weight: bold; 
+                            width: 200px; 
+                            text-align: center;
+                            margin-left: -70px;
+                            margin-top: 20px">
+                     </div>
+
+                     <div class="col-md-2">
+                            <input class="xx" type="text" 
+                            list="keyword"
+                            placeholder="" 
+                            style="color: black; 
+                            font-weight: bold; 
+                            width: 200px; 
+                            text-align: center;
+                            margin-left: -70px;
+                            margin-top: 20px">
+                            
+                     </div>
+
+                     <div class="col-md-2">
+                            <input class="xx" type="text" 
+                            list="keyword"
+                            placeholder="" 
+                            style="color: black; 
+                            font-weight: bold; 
+                            width: 200px; 
+                            text-align: center;
+                            margin-left: -70px;
+                            margin-top: 20px">
+                     </div>
+                     <datalist id="keyword">
+                            <option>游戏本</option>
+                            <option>大牌</option>
+                            <option>超大屏幕</option>
+                            <option>吃鸡</option>
+                            <option>超薄本</option>
+                     </datalist>
+            </div>
+
+
+           <div class="col-md-10">
+                <div class="col-md-2">
+                        <h3>产品配置：</h3>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="col-md-2">
+                        <h3>CPU:</h3>
+                        <h3>RAM:</h3>
+                    </div>
+                    <div class="col-md-2">
+                            <input class="xx" type="text" 
+                            list="CPU"
+                            placeholder="" 
+                            style="color: black; 
+                            font-weight: bold; 
+                            width: 200px; 
+                            text-align: center;
+                            margin-left: 50px;
+                            margin-top: 20px">
+                           
+                           <input class="xx" type="text" 
+                            list="RAM"
+                            placeholder="" 
+                            style="color: black; 
+                            font-weight: bold; 
+                            width: 200px; 
+                            text-align: center;
+                            margin-left: 50px;
+                            margin-top: 20px">
+                    </div>
+                    <datalist id="CPU">
+                            <option>i7 7700</option>
+                            <option>i5 1234</option>
+                            <option>i3 1234</option>
+                            <option>i5 4321</option>
+                            <option>i7 5678</option>
+                     </datalist>
+                     <datalist id="RAM">
+                            <option>4G</option>
+                            <option>8G</option>
+                            <option>16G</option>
+                            <option>32G</option>
+                            <option>64G</option>
+                     </datalist>
+                </div>
+                
+                <div class="col-md-4">
+                        <div class="col-md-2">
+                            <h3>VC:</h3>
+                            <h3>HDD:</h3>
+                        </div>
+                        <div class="col-md-2">
+                                <input class="xx" type="text" 
+                                list="VC"
+                                placeholder="" 
+                                style="color: black; 
+                                font-weight: bold; 
+                                width: 200px; 
+                                text-align: center;
+                                margin-left: 50px;
+                                margin-top: 20px">
+                               
+                               <input class="xx" type="text" 
+                                list="HDD"
+                                placeholder="" 
+                                style="color: black; 
+                                font-weight: bold; 
+                                width: 200px; 
+                                text-align: center;
+                                margin-left: 50px;
+                                margin-top: 20px">
+                        </div>
+                        <datalist id="VC">
+                                <option>Gtx1050</option>
+                                <option>Gtx1060</option>
+                                <option>Gtx1070</option>
+                                <option>Gtx1080</option>
+                                <option>Rtx2080</option>
+                         </datalist>
+                         <datalist id="HDD">
+                                <option>256G</option>
+                                <option>512G</option>
+                                <option>1T</option>
+                                <option>2T</option>
+                         </datalist>
+                    </div>
+           </div>
+
+
+
+           <div class="col-md-10">
+                <div class="col-md-2">
+                    <h3>
+                    产品描述:
+                    </h3>
+                </div>
+                <div class="col-md-8">
+                    <input class="xx" type="text"
+                    style="color: black; 
+                            font-weight: bold; 
+                            width: 70%; 
+                            height: 200px;
+                            text-align: center;
+                            margin-left: -100px;
+                            margin-top: 25px">
+                </div>
+           </div>
+
+           <div class="col-md-10">
+
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"><button onclick="addcomputer()" class="btn btn-default" type="button" style="width:100px;">添加</button></div>
+                             <div class="col-md-1"><button class="btn btn-default" type="button" style="width:100px;" onclick="$('.xx').val('');">取消</button></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-1"></div>
+           </div>
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </div>
+  
+    
+</body>
+</html>
