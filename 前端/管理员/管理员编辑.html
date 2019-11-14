@@ -2,6 +2,7 @@
 <html>
 	<head>
 	<title>Hunter</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script  src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -20,10 +21,14 @@
 					type:'',
 					url:"",
 					data:{
-
+						"title":document.getElementById("title").value;
+						"content":document.getElementById("content").value;
+						"sourse":document.getElementById("sourse").value;
+						"Time":document.getElementById("Time").value;
+						"visitTime":document.getElementById("visitTime").value;
 					},
 					success:function(){
-
+						alert("更新成功")
 					},
 					error:function () {
 						alert("failed")
@@ -122,7 +127,7 @@
 			<div class="col-md-3">
 				<div class="form-group" style="width: 550px; border:rgba(255, 255, 255, 0.103) 1px solid;padding-right: 0px;">
 					<div class="col-sm-10">
-						<input type="email" class="form-control" id="inputEmail3" placeholder="请填写作者" style="border:#660066 2px solid; width: 300px; font-size: 20px; font-weight: bold; margin-left: -15px;height: 60px;"/>
+						<input type="email" class="form-control" id="inputEmail3" placeholder="请填写出处" style="border:#660066 2px solid; width: 300px; font-size: 20px; font-weight: bold; margin-left: -15px;height: 60px;"/>
 					</div>
 				</div>
 			</div>
@@ -130,7 +135,7 @@
 				<div class="col-md-2">
 					<div class="form-group" style="margin-left: 0px;">
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="标签" style="border:#660066 2px solid; width: 200px; font-size: 20px; font-weight: bold; margin-left: -30px;height: 60px;"/>
+							<input type="email" class="form-control" id="inputEmail3" placeholder="时间" style="border:#660066 2px solid; width: 200px; font-size: 20px; font-weight: bold; margin-left: -30px;height: 60px;"/>
 						</div>
 					</div>
 				</div>

@@ -12,36 +12,83 @@
 </head>
 <body style="padding-top: 90px">
     <script type="text/javascript">
-        function load(){//界面刷新时显示所有用户的信息
-            $.ajax({
-                type:'',
-                url:"",
-                data:{
-
-                },
-                success:function(){
-
-                },
-                error:function () {
-                    alert("failed")
-
-                }
-            });
-        }
         function addhardware(){//新增硬件信息
-            $.ajax({
-                type:'',
-                url:"",
-                data:{
-
-                },
-                success:function(){
-
-                },
-                error:function () {
-                    alert("failed")
-                }
-            })
+            if(document.getElementById("category").value == "CPU")
+			{
+				$.ajax({
+				    type:'post',
+				    url:"/updateCPU",
+				    data:{
+						"model":document.getElementById("name").value,
+						"price":document.getElementById("price").value,
+						"parameter":document.getElementById("parameter").value,
+						"recommend":document.getElementById("recommend").value,
+				    },
+				    success:function(){
+						alert("更新成功")
+				    },
+				    error:function () {
+				        alert("failed")
+				    }
+				})
+			}
+			else if(document.getElementById("category").value == "显卡")
+			{
+				$.ajax({
+				    type:'post',
+				    url:"/updatedisplayCard",
+				    data:{
+						"model":document.getElementById("name").value,
+						"price":document.getElementById("price").value,
+						"parameter":document.getElementById("parameter").value,
+						"recommend":document.getElementById("recommend").value,
+				    },
+				    success:function(){
+						alert("更新成功")
+				    },
+				    error:function () {
+				        alert("failed")
+				    }
+				})
+			}
+			else if(document.getElementById("category").value == "硬盘")
+			{
+				$.ajax({
+				    type:'post',
+				    url:"/updatehardCard",
+				    data:{
+						"model":document.getElementById("name").value,
+						"price":document.getElementById("price").value,
+						"parameter":document.getElementById("parameter").value,
+						"recommend":document.getElementById("recommend").value,
+				    },
+				    success:function(){
+						alert("更新成功")
+				    },
+				    error:function () {
+				        alert("failed")
+				    }
+				})
+			}
+			else if(document.getElementById("category").value == "内存")
+			{
+				$.ajax({
+				    type:'post',
+				    url:"/updatememory",
+				    data:{
+						"model":document.getElementById("name").value,
+						"price":document.getElementById("price").value,
+						"parameter":document.getElementById("parameter").value,
+						"recommend":document.getElementById("recommend").value,
+				    },
+				    success:function(){
+						alert("更新成功")
+				    },
+				    error:function () {
+				        alert("failed")
+				    }
+				})
+			}
         }	
     </script>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
@@ -118,21 +165,34 @@
                     <div class="form-group">
                         <label for="product category" class="col-sm-2 control-label">产品种类</label>
                         <div class="col-sm-5">
-                            <input type="category" class="form-control" id="product category" list="data1" placeholder="CPU"/>
+                            <input type="category" class="form-control" id="category" list="data1" placeholder="CPU"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="product name" class="col-sm-2 control-label">产品名称</label>
                         <div class="col-sm-5">
-                            <input type="name" class="form-control" id="product name" />
+                            <input type="name" class="form-control" id="name" />
                         </div>
                     </div>
+					<div class="form-group">
+					    <label for="price" class="col-sm-2 control-label">产品价格</label>
+					    <div class="col-sm-5">
+					        <input type="name" class="form-control" id="price" />
+					    </div>
+					</div>
                     <div class="form-group">
-                        <label for="product description" class="col-sm-2 control-label">产品描述</label>
+                        <label for="parameter" class="col-sm-2 control-label">产品参数</label>
                         <div class="col-sm-5">
-                            <textarea type="description" class="form-control" id="product description" style="width:500px;height: 400px" ></textarea>
+                            <input type="name" class="form-control" id="parameter" />
                         </div>
                     </div>
+					<div class="form-group">
+					    <label for="product description" class="col-sm-2 control-label">产品评论</label>
+					    <div class="col-sm-5">
+					        <textarea type="description" class="form-control" id="recommend" style="width:500px;height: 200px" ></textarea>
+					    </div>
+					</div>
+					
                 </form>
             </div>
         </div>
@@ -149,6 +209,7 @@
         </div>
     </div>
     <datalist id="data1">
+		<option>cpu</option>
         <option>显卡</option>
         <option>硬盘</option>
         <option>内存</option>
