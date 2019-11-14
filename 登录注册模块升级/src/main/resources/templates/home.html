@@ -2,13 +2,14 @@
 <html>
    <head>
       <title>主页</title>
+       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-       <!-- 引入 Bootstrap -->
-       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <!-- 引入 Bootstrap -->
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
        <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
        <script src="https://code.jquery.com/jquery.js"></script>
        <!-- 包括所有已编译的插件 -->
-       <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
  
       <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
       <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
@@ -18,50 +19,7 @@
       <![endif]-->
    </head>
    <body style="padding-top: 90px;">
-        <script type="text/javascript">
-            function load(){//加载界面时数据加载
-                $.ajax({
-                    type:'',
-                    url:"",
-                    data:{
 
-                    },
-                    success:function(){
-
-                    }
-                })
-            }
-            function hotspot(){
-                $.ajax({
-                    type:'',
-                    url:"",
-                    data:{
-
-                    },
-                    success:function(){
-
-                    },
-                    error:function () {//弹窗，后面可以删除
-                        alert("failed")
-                    }
-                })
-            }
-            function excomputer(){//具体电脑信息
-                $.ajax({
-                    type:'',
-                    url:"",
-                    data:{
-
-                    },
-                    success:function(){
-
-                    },
-                    error:function () {//弹窗，后面可以删除
-                        alert("failed")
-                    }
-                })
-            }
-        </script>
         <div class="container-fluid">
         <!--导航栏-->
             <div class="row-fluid">
@@ -152,13 +110,13 @@
                                         <!-- 轮播（Carousel）项目 -->
                                         <div class="carousel-inner">
                                             <div class="item active">
-                                                <a onclick="hotspot()"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2634172790,2987999199&amp;fm=26&amp;gp=0.jpg" alt="First slide"/></a>
+                                                <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2634172790,2987999199&amp;fm=26&amp;gp=0.jpg" alt="First slide"/>
                                             </div>
                                             <div class="item">
-                                                <a onclick="hotspot()"><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1032169849,3240386588&amp;fm=26&amp;gp=0.jpg" alt="Second slide"/></a>
+                                                <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1032169849,3240386588&amp;fm=26&amp;gp=0.jpg" alt="Second slide"/>
                                             </div>
                                             <div class="item">
-                                                <a onclick="hotspot()"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3861115627,2732340871&amp;fm=26&amp;gp=0.jpg" alt="Third slide"/></a>
+                                                <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3861115627,2732340871&amp;fm=26&amp;gp=0.jpg" alt="Third slide"/>
                                             </div>
                                         </div>
                                         <!-- 轮播（Carousel）导航 -->
@@ -178,7 +136,7 @@
                                 </div>
                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"><!-- 大屏幕放3张略缩图，pc端放4张，平板和手机放6张-->
                                         <div class="thumbnail">
-                                          <a onclick="excomputer()"><img src="timg.jpg" alt="..." class="img-responsive" /></a>
+                                          <img src="timg.jpg" alt="..." class="img-responsive" />
                                           <div class="caption">
                                             <h4>Alienware</h4>
                                             <p style="color:red;">
@@ -189,7 +147,7 @@
                                  </div>
                                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"><!-- 大屏幕放3张略缩图，pc端放4张，平板和手机放6张-->
                                         <div class="thumbnail">
-                                          <a onclick="excomputer()"><img src="timg.jpg" alt="..." class="img-responsive" /></a>
+                                          <img src="timg.jpg" alt="..." class="img-responsive" />
                                           <div class="caption">
                                             <h4>Alienware</h4>
                                             <p style="color:red;">
@@ -200,7 +158,7 @@
                                  </div>
                                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"><!-- 大屏幕放3张略缩图，pc端放4张，平板和手机放6张-->
                                         <div class="thumbnail">
-                                        <a onclick="excomputer()"><img src="timg.jpg" alt="..." class="img-responsive" /></a>
+                                          <img src="timg.jpg" alt="..." class="img-responsive" />
                                           <div class="caption">
                                             <h4>Alienware</h4>
                                             <p style="color:red;">
@@ -211,7 +169,7 @@
                                  </div>
                                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"><!-- 大屏幕放3张略缩图，pc端放4张，平板和手机放6张-->
                                         <div class="thumbnail">
-                                          <a onclick="excomputer()"><img src="timg.jpg" alt="..." class="img-responsive" /></a>
+                                          <img src="timg.jpg" alt="..." class="img-responsive" />
                                           <div class="caption">
                                             <h4>Alienware</h4>
                                             <p style="color:red;">
