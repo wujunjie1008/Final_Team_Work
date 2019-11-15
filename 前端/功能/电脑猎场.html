@@ -14,18 +14,11 @@
    </head>
    <body style="padding-top: 90px;">
     <script type="text/javascript">
-        function load(){//加载界面时数据加载
-                $.ajax({
-                    type:'',
-                    url:"",
-                    data:{
-
-                    },
-                    success:function(){
-
-                    }
-                })
-            }
+        $(function load(){//加载界面时数据加载
+                for(var i=0;i<2;i++){
+					document.write("<p>这是一个p</p>");
+				}
+            })
         function computerinfo(){//电脑的具体信息
             $.ajax({
                 type:'',
@@ -129,7 +122,7 @@
                </div>
               <!--商品条目-->
               <div class="col-md-10" style="margin-top:40px;border:solid 3px purple;">
-                  <div class = "row-fluid">
+                  <div id="list" class = "row-fluid">
                         <div class="page-header">
                               <h1 style="font-family: 微软雅黑;font-weight: bold;">电脑猎场</h1>
                         </div>

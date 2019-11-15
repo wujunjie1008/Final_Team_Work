@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>详细热点</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+      <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+      <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  </head>
+   <body style="padding-top: 90px;">
+	   
+        <div class="container-fluid">
+                <!--导航栏-->
+            <div class="row-fluid">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="http://localhost:8080/hello/home">主页</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 18px;margin-left: 40px;color: rgb(255, 255, 255);">
+                                        硬件信息
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #660066;">
+                                        <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">CPU</a></li>
+                                        <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">显卡</a></li>
+                                        <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">内存</a></li>
+                                        <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">硬盘</a></li>
+                                        <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">笔记本</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#" style="margin-left: 40px;color: rgb(255, 255, 255);">社区交流</a>
+                        </div>
+                        <div>
+                            <form class="navbar-form navbar-left" role="search" style="margin-left: 650px;">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="输入查找的内容" style="width: 300px;"/>
+                                </div>
+                                <a href="https://www.baidu.com/">
+                                    <img src="/img/search.png" width="35px" height="35px"/>
+                                </a>
+                            </form>
+                        </div>
+                        <div>
+                            <a href="https://www.baidu.com/"><img src="/img/头像.png" style="width: 37px;margin-top: 8px;"/></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+                      <!--左端功能页面栏-->
+                      <div class="col-md-2" style="margin-left:0px;margin-top:40px;">
+                            <div class="panel-group" id="accordion" >
+                                <div class="panel panel-default" >
+                                    <div class="panel-heading" style="background-color: purple;">
+                                        <h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">                     
+                                                <h5><span class="glyphicon glyphicon-th-list" style="color: rgb(231, 237, 238); font-size: 20px;"> 功能页面</span></h5>
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="list-group">
+                                                <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://127.0.0.1:8080/information1">热点资讯</a>
+                                                <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/hardwareSearchPage.html">硬件匹配</a>
+                                                <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/keywordSearchtPage">关键字匹配</a>
+                                                <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/computerResultPage">电脑猎场</a>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-10" style="margin-top:40px;border:solid 1px purple;">
+                            <div class="page-header" >
+                                    <h1 id="title" style="font-family: 微软雅黑;font-weight: bold;" align="center">热点资讯</h1>
+                                    <h3 id="time" style="font-weight: bold;" align="right">时间</h3>
+                                    <h3 id="source" style="font-weight: bold;" align="right">出处</h3>
+                            </div>
+                            <p id="content" >热点资讯</p>
+                            <h3 id="visitTimes" style="font-weight: bold;" align="right">visitTimes</h3>
+
+                      </div>
+                </div>       
+           </div>
+        <script type="text/javascript">
+            (function a1(){
+                datas = $.cookie('title');
+                d = JSON.parse(datas);
+                document.getElementById("title").innerText = d.title;
+                document.getElementById("content").innerText = d.content;
+                document.getElementById("time").innerText = d.time;
+                document.getElementById("source").innerText = d.source;
+                document.getElementById("visitTimes").innerText = d.visitTimes;
+            }())
+        </script>
+   </body>
+</html>

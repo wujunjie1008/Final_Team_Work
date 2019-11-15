@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>电脑猎场</title>
+       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+      <!-- 引入 Bootstrap -->
+       <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+       <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+       <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+       <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+       <script src="/js/bootstrap.min.js"></script>
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+
+      <!-- 包括所有已编译的插件 -->
+ 
+      <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body style="padding-top: 90px;">
+    <script type="text/javascript">
+        $(function () {
+            data = sessionStorage.getItem("data");
+            data1 = JSON.parse(data);
+            var x = data1[0].brand + data1[0].model + "("+ data1[0].cpuName + " " + data1[0].displayCardName + " " + data1[0].memoryName + " " + data1[0].hardDiskName +")";
+            document.getElementById("name1").innerText = x;
+            document.getElementById("passage1").innerText = data1[0].computerExplain;
+            document.getElementById("price1").innerText = data1[0].price + "元";
+            var y = data1[1].brand + data1[1].model + "("+ data1[1].cpuName + " " + data1[1].displayCardName + " " + data1[1].memoryName + " " + data1[1].hardDiskName +")";
+            document.getElementById("name2").innerText = y;
+            document.getElementById("passage2").innerText = data1[1].computerExplain;
+            document.getElementById("price2").innerText = data1[1].price + "元";
+            sessionStorage.clear();
+        })
+    </script>
+    <div class="container-fluid">
+         <!--导航栏-->
+        <div class="row-fluid">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #660066;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" style="margin-left: 20px;color: rgb(255, 255, 255);" href="http://localhost:8080/hello/home">主页</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 18px;margin-left: 40px;color: rgb(255, 255, 255);">
+                                    硬件信息
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #660066;">
+                                    <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">CPU</a></li>
+                                    <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">显卡</a></li>
+                                    <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">内存</a></li>
+                                    <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">硬盘</a></li>
+                                    <li><a href="http://127.0.0.1:8080/computers/hardwareKonwledgePage" style="font-size: 18px;color: rgb(255, 255, 255);">笔记本</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#" style="margin-left: 40px;color: rgb(255, 255, 255);">社区交流</a>
+                    </div>
+                    <div>
+                        <form class="navbar-form navbar-left" role="search" style="margin-left: 650px;">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="输入查找的内容" style="width: 300px;"/>
+                            </div>
+                            <a href="https://www.baidu.com/">
+                                <img src="/img/search.png" width="35px" height="35px"/>
+                            </a>
+                        </form>
+                    </div>
+                    <div>
+                        <a href="https://www.baidu.com/"><img src="/img/头像.png" style="width: 37px;margin-top: 8px;"/></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+         <div class="row-fluid">
+               <!--左端功能页面栏-->
+               <div class="col-md-2" style="margin-left:0px;margin-top:40px;">
+                     <div class="panel-group" id="accordion" >
+                         <div class="panel panel-default" >
+                             <div class="panel-heading" style="background-color:purple;">
+                                 <h5 class="panel-title">
+                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">                     
+                                         <h5><span class="glyphicon glyphicon-th-list" style="color: rgb(231, 237, 238); font-size: 20px;"> 功能页面</span></h5>
+                                     </a>
+                                 </h5>
+                             </div>
+                             <div id="collapseOne" class="panel-collapse collapse in">
+                                 <div class="panel-body">
+                                     <div class="list-group">
+                                         <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://127.0.0.1:8080/information1">热点资讯</a>
+                                         <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/hardwareSearchPage.html">硬件匹配</a>
+                                         <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/keywordSearchtPage">关键字匹配</a>
+                                         <a class="list-group-item" style="color: rgb(117, 75, 187); font-size: 19px;" href="http://localhost:8080/computers/computerResultPage">电脑猎场</a>
+                                     </div>     
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+               </div>
+              <!--商品条目-->
+              <div class="col-md-10" style="margin-top:40px;border:solid 3px purple;">
+                  <div class = "row-fluid">
+                        <div class="page-header">
+                              <h1 style="font-family: 微软雅黑;font-weight: bold;">电脑猎场</h1>
+                        </div>
+                       <!-- 左对齐 -->
+                       <div class="media">
+                          <div class="media-left">
+                             <img src="https://media.hpstore.cn/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/H/7HR15PA-1_T1560136933.png" class="media-object" style="width:200px;height: 200px;">
+                          </div>
+                          <div class="media-body">
+                             <a> <h2 id="name1" class="media-heading">惠普(HP)OMEN X by 15-dg0003TX 幻影精灵X 15.6英寸游戏笔记本电脑(i7-9750H 8G*2 512GSSD*2 RTX2080 8G独显 144Hz)</h2> </a>
+                             <p id="passage1" style="font-size: 20px;">创新双屏设计
+                                   键盘上方安装了业内前沿的 6 英寸 1080p 触摸屏，让您随时随地享受双屏显示器带来的便利。在第二个屏幕上，可在不中断游戏的情况下显示其他应用（比如 Twitch、Discord、Spotify、OMEN Command Center 等），让您流畅地进行使用。
+
+                                   最大设置。任何设置。
+                                   就动力和性能方面而言，暗影精灵 X 15 系列笔记本电脑毫不逊色。搭载第九代英特尔® 酷睿™ 处理器和 NVIDIA® GeForce 显卡，随时随地自由升级设置。</p>
+                             <div class="row-fluid">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6 " style="margin-right: 0px;">
+                                      <a id="link11" class="btn" href="#" style="font-size: 20px;">京东</a>
+                                      <a id="link12" class="btn" href="#" style="font-size: 20px;">淘宝</a>
+                                      <a id="link13" class="btn" href="#" style="font-size: 20px;">官方商城</a>
+                                      <a id="price1" class="text"  style="font-size: 25px;">价格</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <hr>
+                       <div class="media">
+                             <div class="media-left">
+                                  <img src="https://media.hpstore.cn/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/H/7HR15PA-1_T1560136933.png" class="media-object" style="width:200px;height: 200px;">
+                             </div>
+                             <div class="media-body">
+                                      <a> <h2 id="name2" class="media-heading">惠普(HP)OMEN X by 15-dg0003TX 幻影精灵X 15.6英寸游戏笔记本电脑(i7-9750H 8G*2 512GSSD*2 RTX2080 8G独显 144Hz)</h2> </a>
+                                      <p id="passage2" style="font-size: 20px;">创新双屏设计
+                                          键盘上方安装了业内前沿的 6 英寸 1080p 触摸屏，让您随时随地享受双屏显示器带来的便利。在第二个屏幕上，可在不中断游戏的情况下显示其他应用（比如 Twitch、Discord、Spotify、OMEN Command Center 等），让您流畅地进行使用。
+
+                                          最大设置。任何设置。
+                                          就动力和性能方面而言，暗影精灵 X 15 系列笔记本电脑毫不逊色。搭载第九代英特尔® 酷睿™ 处理器和 NVIDIA® GeForce 显卡，随时随地自由升级设置。</p>
+                                      <div class="row-fluid">
+                                          <div class="col-md-6">
+                                          </div>
+                                          <div class="col-md-6 " style="margin-right: 0px;">
+                                              <a id="link21" class="btn" href="#" style="font-size: 20px;">京东</a>
+                                              <a id="link22" class="btn" href="#" style="font-size: 20px;">淘宝</a>
+                                              <a id="link23" class="btn" href="#" style="font-size: 20px;">官方商城</a>
+                                              <a id="price2" class="text"  style="font-size: 25px;">价格</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                       </div>
+                       <hr>
+                      <div class="row-fluid">
+                          <div class="col-md-4" style="margin-left:0px;margin-top:40px;">
+                          </div>
+                          <div class="col-md-8" style="margin-left:0px;margin-top:40px;">
+                              <ul class="pagination pagination-lg">
+                                  <li>
+                                      <a href="#" style="color: purple;">Prev</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" style="color: purple;">1</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" style="color: purple;">2</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" style="color: purple;">3</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" style="color: purple;">Next</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                   </div>
+              </div>
+         </div>
+    </div>   
+   </body>
+</html>
